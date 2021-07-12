@@ -1,10 +1,12 @@
+import 'dart:io';
+
 import 'package:bwa_flutix/bloc/blocs.dart';
 import 'package:bwa_flutix/models/models.dart';
 import 'package:bwa_flutix/services/services.dart';
 import 'package:bwa_flutix/shared/shared.dart';
 import 'package:bwa_flutix/ui/widgets/widgets.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -36,3 +38,4 @@ part 'ticket_detail_page.dart';
 part 'profile_page.dart';
 part 'topup_page.dart';
 part 'wallet_page.dart';
+part 'edit_profile_page.dart';

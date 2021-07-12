@@ -386,7 +386,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
 
                                         context.bloc<PageBloc>().add(
                                             GoToSuccessPage(
-                                                widget.ticket.copyWith(totalPrice: total), transaction));
+                                                widget.ticket.copyWith(
+                                                    totalPrice: total),
+                                                transaction));
                                       } else {
                                         // # Uang tidak cukup
                                       }

@@ -3,7 +3,7 @@ part of 'pages.dart';
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    FirebaseUser firebaseUser = Provider.of<FirebaseUser>(context);
+    auth.User firebaseUser = Provider.of<auth.User>(context);
 
     if (firebaseUser == null) {
       if (!(prevPageEvent is GoToSplashPage)) {
@@ -60,6 +60,19 @@ class Wrapper extends StatelessWidget {
                                                                 ? WalletPage(
                                                                     pageState
                                                                         .pageEvent)
-                                                                : MainPage());
+                                                                : (pageState
+                                                                        is OnEditProfilePage)
+                                                                    ? EditProfilePage(
+                                                                        pageState
+                                                                            .user)
+                                                                    : (pageState
+                                                                            is OnMainPage)
+                                                                        ? MainPage(
+                                                                            bottomNavBarIndex:
+                                                                                pageState.bottomNavBarIndex,
+                                                                            isExpired:
+                                                                                pageState.isExpired,
+                                                                          )
+                                                                        : Container());
   }
 }
