@@ -27,7 +27,9 @@ class MoviePage extends StatelessWidget {
               return Row(
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.bloc<PageBloc>().add(GoToProfilePage());
+                    },
                     child: Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
@@ -74,7 +76,11 @@ class MoviePage extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          context
+                              .bloc<PageBloc>()
+                              .add(GoToWalletPage(GoToMainPage()));
+                        },
                         child: Text(
                           NumberFormat.currency(
                                   locale: "id_ID",
