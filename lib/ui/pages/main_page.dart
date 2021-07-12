@@ -43,7 +43,9 @@ class _MainPageState extends State<MainPage> {
             },
             children: <Widget>[
               MoviePage(),
-              TicketPage(),
+              TicketPage(
+                isExpiredTicket: widget.isExpired,
+              )
             ],
           ),
           createCustomBottomNavBar(),

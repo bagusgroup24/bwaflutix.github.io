@@ -42,7 +42,7 @@ class OnPreferencePage extends PageState {
   final RegistrationData registrationData;
 
   OnPreferencePage(this.registrationData);
-
+  
   @override
   List<Object> get props => [];
 }
@@ -51,7 +51,7 @@ class OnAccountConfirmationPage extends PageState {
   final RegistrationData registrationData;
 
   OnAccountConfirmationPage(this.registrationData);
-
+  
   @override
   List<Object> get props => [];
 }

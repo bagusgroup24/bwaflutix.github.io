@@ -19,8 +19,8 @@ class FlutixTransactionServices {
   static Future<List<FlutixTransaction>> getTransaction(String userID) async {
     QuerySnapshot snapshot = await transactionCollection.get();
 
-    var documents =
-        snapshot.docs.where((document) => document.data()['userID'] == userID);
+    var documents = snapshot.docs
+        .where((document) => document.data()['userID'] == userID);
 
     return documents
         .map((e) => FlutixTransaction(

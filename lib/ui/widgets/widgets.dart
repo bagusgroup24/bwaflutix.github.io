@@ -1,10 +1,10 @@
 import 'package:bwa_flutix/models/models.dart';
-import 'package:bwa_flutix/shared/shared.dart';
 import 'package:flutter/material.dart';
+import 'package:bwa_flutix/shared/shared.dart';
 import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:bwa_flutix/extensions/extensions.dart';
+import 'package:shimmer/shimmer.dart';
 
 part 'selectable_box.dart';
 part 'movie_card.dart';

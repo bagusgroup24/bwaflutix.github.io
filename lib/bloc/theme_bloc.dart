@@ -14,7 +14,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
   Stream<ThemeState> mapEventToState(
     ThemeEvent event,
   ) async* {
-    if (event is ChangeTheme) {
+    if(event is ChangeTheme) {
       yield ThemeState(event.themeData);
     }
   }
